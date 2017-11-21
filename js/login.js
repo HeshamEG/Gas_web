@@ -12,10 +12,11 @@
   firebase.initializeApp(config);
 // </script>
 
-if(email=='gasforksa'){
+if(email==='gasforksa'){
     firebase.auth().signInWithEmailAndPassword(email+'@gmail.com', password).then(function (user){
         return user;
     }).catch(function(error) {
+
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
