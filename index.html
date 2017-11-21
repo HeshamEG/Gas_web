@@ -73,12 +73,12 @@
         <div class="container">
             <div class="col-md-9 offset-md-4">
                 <br>
-                <form class="form-inline">
+                <form method="post" name="loginForm" class="form-inline">
                     <input id="email" type="text" class="form-control col-md-4" placeholder="email">
                     &nbsp;&nbsp;&nbsp;
                     <input id="password" type="password" class="form-control col-md-3" placeholder="password ">
                     &nbsp;&nbsp;&nbsp;
-                    <button id="LoginAdmin" class="btn btn-sm col-md-1"> login</button>
+                    <button type="submit" class="btn btn-sm col-md-1"> login</button>
                 </form>
             </div>
         </div>
@@ -173,7 +173,7 @@
 
         $.ajax({
             method: "Post",
-            headers: {"Content-Type": "application/json"},
+//            headers: {"Content-Type": "application/json"},
             url: 'js/login.js',
             data: data
 
