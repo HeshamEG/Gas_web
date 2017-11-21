@@ -1,28 +1,34 @@
-(function(){
+(function () {
 // <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 // <script>
-  // Initialize Firebase
+    // Initialize Firebase
 
-  const config = {
-    apiKey: "AIzaSyAzmtOBtWYDL4srdRqEfZFiwsq1rs2JHOA",
-    authDomain: "gasksa-de4ab.firebaseapp.com",
-    databaseURL: "https://gasksa-de4ab.firebaseio.com",
-    projectId: "gasksa-de4ab",
-    storageBucket: "gasksa-de4ab.appspot.com",
-    messagingSenderId: "193816669511"}
-  firebase.initializeApp(config);
+    const config = {
+        apiKey: "AIzaSyAzmtOBtWYDL4srdRqEfZFiwsq1rs2JHOA",
+        authDomain: "gasksa-de4ab.firebaseapp.com",
+        databaseURL: "https://gasksa-de4ab.firebaseio.com",
+        projectId: "gasksa-de4ab",
+        storageBucket: "gasksa-de4ab.appspot.com",
+        messagingSenderId: "193816669511"
+    }
+    firebase.initializeApp(config);
 // </script>
-console.log()
+    console.log();
     /////////////////
-    document.querySelector('.col-md-1')
-        .addEventListener("click", function( event ) {
+    document.querySelector('.addvalue')
+        .addEventListener("click", function (event) {
             event.preventDefault();
-            if(document.querySelector('#email').value != '' ){
-                email: document.querySelector('#email').value,
-                if(email==='gasforksa'){
-                    firebase.auth().signInWithEmailAndPassword(email+'@gmail.com', document.getElementById(password)).then(function (user){
+            if (document.querySelector('#email').value != '' || document.querySelector('#paassword').value != '') {
+                email= document.querySelector('#email').value
+                password=document.querySelector('#password').value
+                console.log(email);
+                console.log(password);
+                if (email === 'gasforksa') {
+                    firebase.auth().signInWithEmailAndPassword(email + '@gmail.com',password).then(function (user) {
+                        window.location.href = 'Admin/index.html'
                         return user;
-                    }).catch(function(error) {
+
+                    }).catch(function (error) {
 
                         // Handle Errors here.
                         var errorCode = error.code;
@@ -33,7 +39,7 @@ console.log()
 
                     console.log(firebase.auth())
 
-                }else{
+                } else {
                     console.log('notAdmin');
                     return 'notAdmin'
                 }
