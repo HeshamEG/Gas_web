@@ -10,7 +10,7 @@
         projectId: "gasksa-de4ab",
         storageBucket: "gasksa-de4ab.appspot.com",
         messagingSenderId: "193816669511"
-    }
+    };
     firebase.initializeApp(config);
 // </script>
     console.log();
