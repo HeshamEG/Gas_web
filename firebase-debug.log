@@ -1,28 +1,36 @@
-[debug] [2017-11-21T09:16:33.583Z] ----------------------------------------------------------------------
-[debug] [2017-11-21T09:16:33.583Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hesham\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2017-11-21T09:16:33.583Z] CLI Version:   3.15.2
-[debug] [2017-11-21T09:16:33.583Z] Platform:      win32
-[debug] [2017-11-21T09:16:33.583Z] Node Version:  v8.9.1
-[debug] [2017-11-21T09:16:33.583Z] Time:          Tue Nov 21 2017 11:16:33 GMT+0200 (Egypt Standard Time)
-[debug] [2017-11-21T09:16:33.583Z] ----------------------------------------------------------------------
+[debug] [2017-11-21T11:12:28.307Z] ----------------------------------------------------------------------
+[debug] [2017-11-21T11:12:28.310Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mahmoud\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-11-21T11:12:28.310Z] CLI Version:   3.15.2
+[debug] [2017-11-21T11:12:28.311Z] Platform:      win32
+[debug] [2017-11-21T11:12:28.311Z] Node Version:  v8.4.0
+[debug] [2017-11-21T11:12:28.311Z] Time:          Tue Nov 21 2017 13:12:28 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-21T11:12:28.311Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2017-11-21T09:16:33.615Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-11-21T09:16:33.615Z] > authorizing via signed-in user
-[debug] [2017-11-21T09:16:33.615Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gasksa-de4ab  
- Tue Nov 21 2017 11:16:33 GMT+0200 (Egypt Standard Time)
-[debug] [2017-11-21T09:16:34.745Z] <<< HTTP RESPONSE 200
-[debug] [2017-11-21T09:16:34.745Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gasksa-de4ab/tokens  
- Tue Nov 21 2017 11:16:34 GMT+0200 (Egypt Standard Time)
-[debug] [2017-11-21T09:16:35.604Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-21T11:12:28.324Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-21T11:12:28.325Z] > authorizing via signed-in user
+[debug] [2017-11-21T11:12:28.326Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-21T11:12:28.327Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/tjOgPMZrQLldNKUMvLg4T353bylA2cDbm1YZ6_Xb2OY',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Nov 21 2017 13:12:28 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-21T11:12:28.736Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-21T11:12:28.773Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gasksa-de4ab  
+ Tue Nov 21 2017 13:12:28 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-21T11:12:29.958Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-21T11:12:29.959Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gasksa-de4ab/tokens  
+ Tue Nov 21 2017 13:12:29 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-21T11:12:30.767Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'G:\AlexForProgApps\Gas_web\Gas_website'...
+[info] === Serving from 'C:\Users\mahmoud\Desktop\Gas_web'...
 [info] 
-[debug] [2017-11-21T09:16:35.620Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gasksa-de4ab  
- Tue Nov 21 2017 11:16:35 GMT+0200 (Egypt Standard Time)
-[debug] [2017-11-21T09:16:36.760Z] <<< HTTP RESPONSE 200
-[debug] [2017-11-21T09:16:36.760Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/193816669511/clients/_:getWebAppConfig  
- Tue Nov 21 2017 11:16:36 GMT+0200 (Egypt Standard Time)
-[debug] [2017-11-21T09:16:37.542Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-21T11:12:30.774Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gasksa-de4ab  
+ Tue Nov 21 2017 13:12:30 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-21T11:12:31.898Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-21T11:12:31.898Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/193816669511/clients/_:getWebAppConfig  
+ Tue Nov 21 2017 13:12:31 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-21T11:12:32.674Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: /
 [info] +  hosting: Local server: http://localhost:5000
 
