@@ -155,32 +155,6 @@
 
 <script>
 
-    $('#LoginAdmin').on('click', function () {
 
-        return login();
-    });
-
-    function login() {
-        var email = $('#email').val();
-        var password= $('#password').val();
-        console.log(email);
-        console.log(password);
-        var data = {
-            email: email,
-            password:password
-        };
-        console.log(data);
-
-        $.ajax({
-            method: "Post",
-//            headers: {"Content-Type": "application/json"},
-            url: 'js/login.js',
-            data: data
-
-        }).done(function (result) {
-            console.log(result);
-        });
-
-    }
 </script>
 </html>
