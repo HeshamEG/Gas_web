@@ -11,8 +11,8 @@
     messagingSenderId: "193816669511"}
   firebase.initializeApp(config);
 // </script>
-
-if(email=='gasforksa'){
+console.log(email+'@gmail.com', password);
+if(email ==='gasforksa'){
     firebase.auth().signInWithEmailAndPassword(email+'@gmail.com', password).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;

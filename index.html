@@ -17,10 +17,10 @@
     <!-- Custom styles for this template -->
     <link href="css/full.css" rel="stylesheet">
 
-     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
-    <script src="js/login.js"></script>
+    <!--<script src="js/login.js"></script>-->
 
 </head>
 
@@ -74,11 +74,11 @@
             <div class="col-md-9 offset-md-4">
                 <br>
                 <form class="form-inline">
-                    <input type="text" class="form-control col-md-4" value="" placeholder="email ">
+                    <input id="email" type="text" class="form-control col-md-4" placeholder="email">
                     &nbsp;&nbsp;&nbsp;
-                    <input type="password" class="form-control col-md-3  " value="" placeholder="password ">
+                    <input id="password" type="password" class="form-control col-md-3" placeholder="password ">
                     &nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-sm col-md-1"> login</button>
+                    <button id="LoginAdmin" class="btn btn-sm col-md-1"> login</button>
                 </form>
             </div>
         </div>
@@ -112,13 +112,17 @@
     <div class="col-md-3 offset-md-8 text1">
         <h4 class="distributer">Become A Distributer</h4>
         <div class="sp-15"></div>
-        <a href="javascript:;" style="color:#302f2f"><i class="fa fa-play" style="color:#f90" aria-hidden="true"></i> GAS Ksa Via goolge Play Store</a>
+        <a href="javascript:;" style="color:#302f2f"><i class="fa fa-play" style="color:#f90" aria-hidden="true"></i>
+            GAS Ksa Via goolge Play Store</a>
         <div class="sp-15"></div>
-        <a href="javascript:;" style="color:#302f2f"><i class="fa fa-apple" style="color:#f90" aria-hidden="true"></i> GAS Ksa Via Apple Store</a>
+        <a href="javascript:;" style="color:#302f2f"><i class="fa fa-apple" style="color:#f90" aria-hidden="true"></i>
+            GAS Ksa Via Apple Store</a>
     </div>
-    <div class="col-md-12 text2" >
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into </p>
+    <div class="col-md-12 text2">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s,</p>
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into </p>
         <p>electronic typesetting, remaining essentially unchanged. It was popularised in </p>
     </div>
 </div>
@@ -150,9 +154,33 @@
 </body>
 
 <script>
-    $(document).ready(function () {
 
+    $('#LoginAdmin').on('click', function () {
 
-    })
+        return login();
+    });
+
+    function login() {
+        var email = $('#email').val();
+        var password= $('#password').val();
+        console.log(email);
+        console.log(password);
+        var data = {
+            email: email,
+            password:password
+        };
+        console.log(data);
+
+        $.ajax({
+            method: "Post",
+            headers: {"Content-Type": "application/json"},
+            url: 'js/login.js',
+            data: data
+
+        }).done(function (result) {
+            console.log(result);
+        });
+
+    }
 </script>
 </html>
