@@ -1,0 +1,189 @@
+/*!
+ * Start Bootstrap - Full (https://startbootstrap.com/template-overviews/full)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full/blob/master/LICENSE)
+ */
+
+body {
+    background: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.first_nav {
+    /*background: #3A3A3A;*/
+
+    width: 1px;
+    height: 77px;
+    border-right: 60px solid transparent;
+    border-top: 102px solid #4c4c4c;
+    z-index: 1000;
+}
+
+.socend_nav {
+
+    background: #FC7906;
+    height: 76px;
+    width: 915px;
+    position: relative;
+    /*left:-16px;*/
+    top: -102px;
+    border-left: 10px solid #FC7906;
+    /*border-bottom: 102px solid #FC7906;*/
+}
+
+.up {
+    position: relative;
+    top: -39px;
+
+}
+
+.link {
+    color: #000;
+    background: #fff;
+
+}
+
+.first_footer {
+    background: #FC7906;
+    height: 60px;
+    /*width: 915px;*/
+    position: relative;
+    /*left:-16px;*/
+    top: 92px;
+    border-left: 10px solid #FC7906;
+    /*border-bottom: 102px solid #FC7906;*/
+
+}
+
+.secoend_footer {
+    /* background: #3A3A3A; */
+    height: 46px;
+    border-left: 64px solid transparent;
+    border-bottom: 92px solid #4c4c4c;
+    z-index: 1000;
+}
+
+.right-triangle {
+    /*opacity: 0.2;*/
+    top: -101px;
+    height: 90px;
+    border-left: 237px solid transparent;
+    border-bottom: 1000px solid rgba(172,171,171,0.5);
+    z-index: 1000;
+}
+
+
+.left-triangle {
+
+    top: -826px;
+    border-top: 721px solid #FC9c48;
+    border-right: 251px solid transparent;
+    z-index: 1000;
+}
+
+.color-text-footer {
+    color: #fff;
+}
+
+.sp-15 {
+    height: 15px;
+    width: 100%;
+}
+
+
+.left-part {
+
+    /* background: #FC9c48; */
+    border-right: 130px solid transparent;
+    border-top: 313px solid rgba(255,156,72,0.5);
+     height: 30px;
+    position: relative;
+    top: -101px;
+    z-index: 1000;
+    left: -280px;
+}
+
+.hr-logo {
+    background: #FC9c48
+    /*border-top:10px #FC9c48 ;*/
+
+}
+#content{
+    margin-bottom: -20px;
+}
+
+.divslider{
+    top:-1547px;
+    left: 1px;
+
+}
+.w-50{
+ width: 100% !important;
+}
+.distributer{
+    color:#FC9c48;
+}
+.text1{
+    position: relative;
+    top :-1500px;
+    left: 28px;
+}
+.text2{
+    position: relative;
+    top :-1460px;
+    left: 28px;
+    color:#302f2f;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    top: 1600px;
+    left: 0;
+}
+/* about page*/
+.footerAbout {
+    position: absolute;
+    right: 0;
+    top: 650px;
+    /*bottom: 650px;*/
+    left: 0;
+}
+.titleabout{
+color:#FC7906;
+}
+.aboutpagehr{
+    background: #000;
+    height: 3px;
+    width:100px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+.about-text{
+   color:#302f2f;
+}
+.sp-35{
+    width:100%;
+    height:35px;
+}
+/*about page end*/
+/*contact us page start*/
+.contact_pagehr{
+    background: #000;
+    height: 3px;
+    width:160px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+.contactustext{
+    color:#FC7906;
+    font-size:20px;
+}
+.sp-55{
+    width:100%;
+    height:55px;
+}
+/*contact us pagwe end*/
