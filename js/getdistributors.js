@@ -20,9 +20,9 @@
         var distributor = [];
         var keys = [];
         for (var i  in snapshot.val()) {
-            if(snapshot.val()[i].state==0){
-            distributor.push(snapshot.val()[i]);
-            keys.push(i)
+            if (snapshot.val()[i].state == 0) {
+                distributor.push(snapshot.val()[i]);
+                keys.push(i)
             }
         }
 
@@ -31,16 +31,19 @@
 
             tbody = '<tr>' +
                 '<td>' + distributor[t].name + '</td>' +
+                '<td>' +'<button class="btn btn-primary" onclick="hover()">صور الموزعين</button>'+'</td>'+
                 '<td>' + distributor[t].email + '</td>' +
                 '<td>' + distributor[t].phoneNo + '</td>' +
                 '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="accceptordecliend(' + t + ',2)">X</button>' + '</td>' +
                 '</tr>';
             request.row.add($(tbody)).draw();
 
-            accceptordecliend = function (params,state) {
+            accceptordecliend = function (params, state) {
+
                 console.log(params);
-                contactsRef.child(keys[params]+'/state').set(state)
-                console.log(state);
+                contactsRef.child(keys[params] + '/state').set(state);
+                $.notify("تم بنجاح");
+                location.reload();
             }
         }
         console.log(distributor);
@@ -48,6 +51,11 @@
 
     });
 
+     hover =function() {
+         $('#myModal').modal('show');
+
+
+    };
 
     var userId = firebase.auth()
     // console.log(userId);
