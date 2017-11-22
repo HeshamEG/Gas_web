@@ -18,9 +18,10 @@
     var contactsRef = dbRef.ref('distributors');
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
+        var keys=[];
         for (var i  in snapshot.val()) {
             distributor.push(snapshot.val()[i]);
-
+keys.push(i)
         }
 
         for (var t = 0; t < distributor.length; t++) {
