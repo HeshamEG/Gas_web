@@ -19,42 +19,42 @@
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
         var keys = [];
-        var imgs = []
+        // var imgs = []
         for (var i  in snapshot.val()) {
 
-            if (snapshot.val()[i].state == 0) {
+            // if (snapshot.val()[i].state == 0) {
                 distributor.push(snapshot.val()[i]);
                 keys.push(i)
-                imgs.push(snapshot.val()[i].imgType)
-            }
+                // imgs.push(snapshot.val()[i].imgType)
+            // }
         }
-        hover = function (params) {
-            console.log(params);
-            console.log(imgs[params].length);
-            console.log(imgs[params]);
-
-            $('#myModal').modal('show');
-            // $('.dissrc').append('<img src='/' class="img-responsive" /><hr>');
-            //get all
-
-            for (var l = 0; l < imgs[params].length; l++) {
-
-                if (imgs[params][l]) {
-
-                    var storageRef = firebase.storage().ref(keys[params] + "/" + l);
-                    storageRef.getDownloadURL().then(function (url) {
-                        // Insert url into an <img> tag to "download"
-                        // resolve(url);
-                        console.log("img downloaded url", url);
-                        $('.dissrc').append('<img src='+url+' class="img-responsive" /><hr>');
-                    }).catch(function (error) {
-                        console.log("error ", error);
-                    });
-                }
-            }
-
-
-        };
+        // hover = function (params) {
+        //     console.log(params);
+        //     console.log(imgs[params].length);
+        //     console.log(imgs[params]);
+        //
+        //     $('#myModal').modal('show');
+        //     // $('.dissrc').append('<img src='/' class="img-responsive" /><hr>');
+        //     //get all
+        //
+        //     for (var l = 0; l < imgs[params].length; l++) {
+        //
+        //         if (imgs[params][l]) {
+        //
+        //             var storageRef = firebase.storage().ref(keys[params] + "/" + l);
+        //             storageRef.getDownloadURL().then(function (url) {
+        //                 // Insert url into an <img> tag to "download"
+        //                 // resolve(url);
+        //                 console.log("img downloaded url", url);
+        //                 $('.dissrc').append('<img src='+url+' class="img-responsive" /><hr>');
+        //             }).catch(function (error) {
+        //                 console.log("error ", error);
+        //             });
+        //         }
+        //     }
+        //
+        //
+        // };
         for (var t = 0; t < distributor.length; t++) {
 
 
