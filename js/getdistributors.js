@@ -19,7 +19,7 @@
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
         var keys = [];
-        var imgs=[]
+        var imgs = []
         for (var i  in snapshot.val()) {
 
             if (snapshot.val()[i].state == 0) {
@@ -34,7 +34,7 @@
 
             tbody = '<tr>' +
                 '<td>' + distributor[t].name + '</td>' +
-                '<td>' +'<button class="btn btn-primary" onclick="hover()">صور الموزعين</button>'+'</td>'+
+                '<td>' + '<button class="btn btn-primary" onclick="hover(' + t + ')">صور الموزعين</button>' + '</td>' +
                 '<td>' + distributor[t].email + '</td>' +
                 '<td>' + distributor[t].phoneNo + '</td>' +
                 '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="accceptordecliend(' + t + ',2)">X</button>' + '</td>' +
@@ -44,37 +44,40 @@
             accceptordecliend = function (params, state) {
 
                 console.log(params);
-                console.log(imgs[params]);
-//get all
-                for(var l=0;l<=imgs[params].length;l++) {
-                    if (imgs[params][l]){
+                contactsRef.child(keys[params] + '/state').set(state);
+                $.notify("تم بنجاح");
+                location.reload();
+            };
 
-                        var storageRef = firebase.storage().ref(keys[params] + "/"+1);
+        }
+
+        hover = function (params) {
+            console.log(params);
+            $('#myModal').modal('show');
+            // $('.dissrc').append('<img src='/' class="img-responsive" /><hr>');
+            //get all
+            for (var l = 0; l <= imgs[params].length; l++) {
+
+                if (imgs[params][l]) {
+
+                    var storageRef = firebase.storage().ref(keys[params] + "/" + 1);
                     storageRef.getDownloadURL().then(function (url) {
                         // Insert url into an <img> tag to "download"
                         // resolve(url);
                         console.log("img downloaded url", url);
-
+                        $('.dissrc').append('<img src='+url+' class="img-responsive" /><hr>');
                     }).catch(function (error) {
                         console.log("error ", error);
                     });
                 }
-                }
-                contactsRef.child(keys[params] + '/state').set(state);
-                $.notify("تم بنجاح");
-                location.reload();
             }
-        }
-        console.log(distributor);
+
+
+        };
 
 
     });
 
-     hover =function() {
-         $('#myModal').modal('show');
-
-
-    };
 
     var userId = firebase.auth()
     // console.log(userId);
