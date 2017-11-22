@@ -19,10 +19,13 @@
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
         var keys = [];
+        var imgs=[]
         for (var i  in snapshot.val()) {
+
             if (snapshot.val()[i].state == 0) {
                 distributor.push(snapshot.val()[i]);
                 keys.push(i)
+                imgs.push(snapshot.val()[i].imgType)
             }
         }
 
@@ -41,9 +44,25 @@
             accceptordecliend = function (params, state) {
 
                 console.log(params);
+                console.log(imgs[params]);
+                // var  imgRef = firebase.database().ref("distributors/"+keys[params]);
+                for(var l=1;l<=3;l++) {
+                    if (imgs[params][l]){
+
+                        var storageRef = firebase.storage().ref(keys[params] + "/"+1);
+                    storageRef.getDownloadURL().then(function (url) {
+                        // Insert url into an <img> tag to "download"
+                        // resolve(url);
+                        console.log("img downloaded url", url);
+
+                    }).catch(function (error) {
+                        console.log("error ", error);
+                    });
+                }
+                }
                 contactsRef.child(keys[params] + '/state').set(state);
                 $.notify("تم بنجاح");
-                location.reload();
+                // location.reload();
             }
         }
         console.log(distributor);
