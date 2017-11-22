@@ -20,8 +20,10 @@
         var distributor = [];
         var keys = [];
         for (var i  in snapshot.val()) {
+            if(snapshot.val()[i].state==0){
             distributor.push(snapshot.val()[i]);
             keys.push(i)
+            }
         }
 
         for (var t = 0; t < distributor.length; t++) {
@@ -37,6 +39,7 @@
 
             accceptordecliend = function (params,state) {
                 console.log(params);
+                contactsRef.child(keys[params]+'/state').set(state)
                 console.log(state);
             }
         }
