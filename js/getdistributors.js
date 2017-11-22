@@ -18,10 +18,10 @@
     var contactsRef = dbRef.ref('distributors');
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
-        var keys=[];
+        var keys = [];
         for (var i  in snapshot.val()) {
             distributor.push(snapshot.val()[i]);
-keys.push(i)
+            keys.push(i)
         }
 
         for (var t = 0; t < distributor.length; t++) {
@@ -31,12 +31,13 @@ keys.push(i)
                 '<td>' + distributor[t].name + '</td>' +
                 '<td>' + distributor[t].email + '</td>' +
                 '<td>' + distributor[t].phoneNo + '</td>' +
-                '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(distributor)">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="accceptordecliend(distributor[t]">X</button>' + '</td>' +
+                '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="accceptordecliend(' + t + ',2)">X</button>' + '</td>' +
                 '</tr>';
             request.row.add($(tbody)).draw();
 
-            accceptordecliend = function (params) {
+            accceptordecliend = function (params,state) {
                 console.log(params);
+                console.log(state);
             }
         }
         console.log(distributor);
