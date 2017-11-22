@@ -45,8 +45,8 @@
 
                 console.log(params);
                 console.log(imgs[params]);
-                // var  imgRef = firebase.database().ref("distributors/"+keys[params]);
-                for(var l=1;l<=3;l++) {
+//get all
+                for(var l=0;l<=imgs[params].length;l++) {
                     if (imgs[params][l]){
 
                         var storageRef = firebase.storage().ref(keys[params] + "/"+1);
