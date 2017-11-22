@@ -28,19 +28,20 @@
                 '<td>' + distributor[t].name + '</td>' +
                 '<td>' + distributor[t].email + '</td>' +
                 '<td>' + distributor[t].phoneNo + '</td>' +
-                '<td>' +'<button class="btn btn-success" onclick="disstrupit()" >&#x2705;</button>'+'&nbsp;&nbsp;&nbsp;'+'<button class="btn btn-danger" onclick="disstrupit()">X</button>'+'</td>' +
+                '<td>' + '<button class="btn btn-success" onclick="go()">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="disstrupit()">X</button>' + '</td>' +
                 '</tr>';
             request.row.add($(tbody)).draw();
+
+
         }
 
         console.log(distributor);
-
+        go = function () {
+alert();
+        }
 
     });
 
-    function disstrupit() {
-        alert();
-    }
 
     var userId = firebase.auth()
     // console.log(userId);
