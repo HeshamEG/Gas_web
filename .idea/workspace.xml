@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42055b5c-6a2f-4d81-9e73-4948d29dc85a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/request.html" afterPath="$PROJECT_DIR$/Admin/request.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firebase-debug.log" afterPath="$PROJECT_DIR$/firebase-debug.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/getdistributors.js" afterPath="$PROJECT_DIR$/js/getdistributors.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -111,12 +108,12 @@
         <entry file="file://$PROJECT_DIR$/js/getdistributors.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
-              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+              <caret line="32" column="96" lean-forward="false" selection-start-line="32" selection-start-column="96" selection-end-line="32" selection-end-column="96" />
               <folding>
-                <marker date="1511333680046" expanded="true" signature="1033:1041" ph="..." />
-                <marker date="1511333680046" expanded="true" signature="1055:1061" ph=" " />
-                <marker date="1511333680046" expanded="true" signature="1061:1067" ph=" " />
-                <marker date="1511333680046" expanded="true" signature="1067:1073" ph=" " />
+                <marker date="1511335437915" expanded="true" signature="1061:1069" ph="..." />
+                <marker date="1511335437915" expanded="true" signature="1083:1089" ph=" " />
+                <marker date="1511335437915" expanded="true" signature="1089:1095" ph=" " />
+                <marker date="1511335437915" expanded="true" signature="1095:1101" ph=" " />
               </folding>
             </state>
           </provider>
@@ -277,12 +274,12 @@
       <workItem from="1510147448637" duration="2028000" />
       <workItem from="1510208840238" duration="606000" />
       <workItem from="1511262898928" duration="2656000" />
-      <workItem from="1511331749444" duration="1434000" />
+      <workItem from="1511331749444" duration="3190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56468000" />
+    <option name="totallyTimeSpent" value="58224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -883,12 +880,12 @@
     <entry file="file://$PROJECT_DIR$/js/getdistributors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <caret line="32" column="96" lean-forward="false" selection-start-line="32" selection-start-column="96" selection-end-line="32" selection-end-column="96" />
           <folding>
-            <marker date="1511333680046" expanded="true" signature="1033:1041" ph="..." />
-            <marker date="1511333680046" expanded="true" signature="1055:1061" ph=" " />
-            <marker date="1511333680046" expanded="true" signature="1061:1067" ph=" " />
-            <marker date="1511333680046" expanded="true" signature="1067:1073" ph=" " />
+            <marker date="1511335437915" expanded="true" signature="1061:1069" ph="..." />
+            <marker date="1511335437915" expanded="true" signature="1083:1089" ph=" " />
+            <marker date="1511335437915" expanded="true" signature="1089:1095" ph=" " />
+            <marker date="1511335437915" expanded="true" signature="1095:1101" ph=" " />
           </folding>
         </state>
       </provider>

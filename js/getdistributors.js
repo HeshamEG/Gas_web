@@ -24,21 +24,22 @@
         }
 
         for (var t = 0; t < distributor.length; t++) {
+
+
             tbody = '<tr>' +
                 '<td>' + distributor[t].name + '</td>' +
                 '<td>' + distributor[t].email + '</td>' +
                 '<td>' + distributor[t].phoneNo + '</td>' +
-                '<td>' + '<button class="btn btn-success" onclick="go()">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="disstrupit()">X</button>' + '</td>' +
+                '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(distributor)">&#x2705;</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="accceptordecliend(distributor[t]">X</button>' + '</td>' +
                 '</tr>';
             request.row.add($(tbody)).draw();
 
-
+            accceptordecliend = function (params) {
+                console.log(params);
+            }
         }
-
         console.log(distributor);
-        go = function () {
-alert();
-        }
+
 
     });
 
