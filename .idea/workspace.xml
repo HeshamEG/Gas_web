@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42055b5c-6a2f-4d81-9e73-4948d29dc85a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/request.html" afterPath="$PROJECT_DIR$/Admin/request.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/users.html" afterPath="$PROJECT_DIR$/Admin/users.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/getdistributors.js" afterPath="$PROJECT_DIR$/js/getdistributors.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -106,26 +106,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getdistributors.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getdistributors.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/getdistributors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
               <folding>
-                <marker date="1511352643320" expanded="true" signature="1374:1382" ph="..." />
-                <marker date="1511352643320" expanded="true" signature="1396:1402" ph=" " />
-                <marker date="1511352643320" expanded="true" signature="1402:1408" ph=" " />
-                <marker date="1511352643320" expanded="true" signature="1408:1414" ph=" " />
+                <marker date="1511354325396" expanded="true" signature="1374:1382" ph="..." />
+                <marker date="1511354325396" expanded="true" signature="1396:1402" ph=" " />
+                <marker date="1511354325396" expanded="true" signature="1402:1408" ph=" " />
+                <marker date="1511354325396" expanded="true" signature="1408:1414" ph=" " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Admin/users.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="110" column="32" lean-forward="false" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+            <state relative-caret-position="408">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#nav#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -176,9 +176,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Admin/index.html" />
         <option value="$PROJECT_DIR$/css/full.css" />
-        <option value="$PROJECT_DIR$/Admin/users.html" />
         <option value="$PROJECT_DIR$/Admin/request.html" />
         <option value="$PROJECT_DIR$/js/getdistributors.js" />
+        <option value="$PROJECT_DIR$/Admin/users.html" />
       </list>
     </option>
   </component>
@@ -284,12 +284,12 @@
       <workItem from="1510147448637" duration="2028000" />
       <workItem from="1510208840238" duration="606000" />
       <workItem from="1511262898928" duration="2656000" />
-      <workItem from="1511331749444" duration="14407000" />
+      <workItem from="1511331749444" duration="15514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69441000" />
+    <option name="totallyTimeSpent" value="70548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -846,17 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="110" column="32" lean-forward="false" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#nav#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/full.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="686">
@@ -887,13 +876,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/getdistributors.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
           <folding>
-            <marker date="1511352643320" expanded="true" signature="1374:1382" ph="..." />
-            <marker date="1511352643320" expanded="true" signature="1396:1402" ph=" " />
-            <marker date="1511352643320" expanded="true" signature="1402:1408" ph=" " />
-            <marker date="1511352643320" expanded="true" signature="1408:1414" ph=" " />
+            <marker date="1511354325396" expanded="true" signature="1374:1382" ph="..." />
+            <marker date="1511354325396" expanded="true" signature="1396:1402" ph=" " />
+            <marker date="1511354325396" expanded="true" signature="1402:1408" ph=" " />
+            <marker date="1511354325396" expanded="true" signature="1408:1414" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#nav#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
