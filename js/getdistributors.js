@@ -62,7 +62,7 @@
                 }
                 contactsRef.child(keys[params] + '/state').set(state);
                 $.notify("تم بنجاح");
-                // location.reload();
+                location.reload();
             }
         }
         console.log(distributor);
