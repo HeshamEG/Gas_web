@@ -20,13 +20,23 @@
         var history = [];
         var keys = [];
         for (var i  in snapshot.val()) {
-            
-            dbRef.ref('history')
-            history.push(snapshot.val()[i]);
-            keys.push(i)
+console.log(i)
+            dbRef.ref('history/'+i)
+            history.push(i);
 
         }
         for (var t = 0; t < history.length; t++) {
+            console.log(history[t])
+            var details= dbRef.ref('history/'+history[t]);
+            details.once('value').then(function (snapshot){
+               var refCustomerName= dbRef.ref('customers/'+snapshot.val().customerID+'/name');
+                refCustomerName.once('value').then(function (name){
+                    console.log(name.val())
+
+                })
+                console.log(snapshot.val())
+
+            })
 
         }
         // for (var t = 0; t < distributor.length; t++) {
