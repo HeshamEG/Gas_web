@@ -23,6 +23,9 @@
         for (var i  in snapshot.val()) {
 
             if (snapshot.val()[i].state == 0) {
+                distributor[i]=null;
+                keys[i]=null;
+                imgs[i]=null;
                 distributor.push(snapshot.val()[i]);
                 keys.push(i)
                 imgs.push(snapshot.val()[i].imgType)
