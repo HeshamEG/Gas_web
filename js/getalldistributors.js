@@ -90,7 +90,8 @@
         }
 
         hestory = function (params) {
-            window.location.href = 'history.html?distributorsid='+params
+            console.log(keys[params]);
+            window.location.href = 'history.html?distributorsid='+keys[params]
 
         }
 
