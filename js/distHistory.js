@@ -35,13 +35,16 @@
     var contactsRef = dbRef.ref('distributors/'+disid+'/history');
     contactsRef.once('value').then(function (snapshot) {
         var history = [];
-        var keys = [];
+        var data= {
+            details:'',customerName:''
+        };
         for (var i  in snapshot.val()) {
             console.log(i)
             dbRef.ref('history/' + i)
             history.push(i);
 
         }
+        data.details=history;
         for (var t = 0; t < history.length; t++) {
             console.log(history[t]);
             var details = dbRef.ref('history/' + history[t]);
@@ -50,13 +53,15 @@
 
                 refCustomerName.once('value').then(function (name) {
                     console.log(name.val());
+                    data.customerName=name.val()
+
                 });
                 console.log(snapshot.val());
-
+data.details=snapshot.val();
             })
 
         }
-
+        console.log('fainal data :',data);
 
     });
 
