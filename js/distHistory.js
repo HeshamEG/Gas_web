@@ -24,7 +24,7 @@
         }
     };
 
-     disid = getUrlParameter('distributorsid');
+    disid = getUrlParameter('distributorsid');
     console.log(disid);
 
     firebase.initializeApp(config);
@@ -32,36 +32,37 @@
     var request = $('#RequestTable').DataTable();
 
     var dbRef = firebase.database();
-    var contactsRef = dbRef.ref('distributors/'+disid+'/history');
+    var contactsRef = dbRef.ref('distributors/' + disid + '/history');
     contactsRef.once('value').then(function (snapshot) {
         var history = [];
-        var data= {
-            details:'',customerName:''
-        };
+        var data = [];
         for (var i  in snapshot.val()) {
-            console.log(i)
+            // console.log(i)
             dbRef.ref('history/' + i)
             history.push(i);
 
         }
-        data.details=history;
+        console.log(history);
         for (var t = 0; t < history.length; t++) {
-            console.log(history[t]);
+            // console.log(history[t]);
             var details = dbRef.ref('history/' + history[t]);
             details.once('value').then(function (snapshot) {
+                data.push(snapshot.val());
                 var refCustomerName = dbRef.ref('customers/' + snapshot.val().customerID + '/name');
 
+                console.log(data);
                 refCustomerName.once('value').then(function (name) {
-                    console.log(name.val());
-                    data.customerName=name.val()
-
+                    // console.log(name.val());
+                    // data.customerName = name.val()
+                    data.customerID = name.val()
                 });
-                console.log(snapshot.val());
-data.details=snapshot.val();
+                // console.log(snapshot.val());
+
+
             })
 
         }
-        console.log('fainal data :',data);
+        console.log(data);
 
     });
 
