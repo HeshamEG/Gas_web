@@ -29,16 +29,16 @@
 
     firebase.initializeApp(config);
 
-    var request = $('#RequestTable').DataTable();
+    var historyTable = $('#DisHistory').DataTable();
 
     var dbRef = firebase.database();
     var contactsRef = dbRef.ref('distributors/' + disid + '/history');
     contactsRef.once('value').then(function (snapshot) {
         var history = [];
-        var data = [];
-        var names=[]
+        var data = []  ;
+        // var names = [];
         for (var i  in snapshot.val()) {
-            dbRef.ref('history/' + i)
+            dbRef.ref('history/' + i);
             history.push(i);
 
         }
@@ -52,14 +52,45 @@
                 // console.log(data);
                 refCustomerName.once('value').then(function (name) {
 
-                    names.push(name.val())
+                    // names.push(name.val())
+console.log(t)
+
+                    dh = '<tr>'
+                        +'<td>'+res.val().date+'</td>'
+                        +'<td>'+res.val().pipesNo+'</td>'
+                        +'<td>'+res.val().location.label+'</td>'
+                        +'<td>'+res.val().status+'</td>'
+                        +'<td>'+name.val()+'</td>'
+                        +'</tr>';
+                    historyTable.row.add($(dh)).draw();
+
                 });
+
 
 
             })
 
         }
-        console.log(data,names);
+        console.log(data);
+
+        for (var d = 0; d < data.length; d++) {
+
+            // for (var n = 0; n < names.length; n++) {
+
+                //
+                // t = '<tr>'
+                //     +'<td>'+data[d].date+'</td>'
+                //     +'<td>'+data[d].pipesNo+'</td>'
+                //     +'<td>'+data[d].location.label+'</td>'
+                //     +'<td>'+data[d].status+'</td>'
+                //     +'<td>'+names[n]+'</td>'
+                //     +'</tr>'
+
+
+            // }
+
+            history.row.add($(t)).draw();
+        }
 
     });
 
