@@ -58,11 +58,11 @@
 
         hestory = function (params) {
             console.log(keys[params]);
-            window.location.href = 'history.html?distributorsid='+keys[params]
+            window.location.href = 'clintHistory.html?distributorsid='+keys[params]
 
         }
 
-        
+
 
 
 
