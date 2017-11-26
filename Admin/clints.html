@@ -21,8 +21,9 @@
     <link href="../vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../vendor/slick-1.8.0/slick/slick.css">
 
-    <!-- Custom styles for this template -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <!-- Custom styles for this template -->
     <link href="../css/full.css" rel="stylesheet">
 
 </head>
@@ -49,7 +50,6 @@
                                 <b>Requests</b>
                             </center>
                         </a>
-
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active nav-title-color" href="users.html" id="Users">
@@ -99,12 +99,48 @@
                     </div>
                 </nav>
             </div>
+
+            <!--content-->
+            <div class="col-md-11" dir="rtl">
+
+                <div class="sp-35"></div>
+                <h1 class="panel panel-default col-md-3 col-md-push-9 ">
+                    <center>الاعضاء </center>
+                </h1>
+                <div class="sp-55"></div>
+                <div class="sp-15"></div>
+
+                <a href="users.html" class="btn btn-action btn-md box">الموزعين</a>
+                <a href="clints.html" class="btn btn-action btn-md box">العملاء</a>
+                <div class="sp-35"></div>
+                <center>
+                    <table id="ClintTable" class="table table-striped table-bordered" cellspacing="0" width="100%"
+                           dir="rtl">
+                        <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>البريد الالكترونى</th>
+                            <th>رقم التليفون</th>
+                            <th>باقة  </th>
+                            <th> المستخدم من الباقة</th>
+                            <th style="width: 18%">  </th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </center>
+            </div>
+            <!--content-->
         </div>
     </div>
+
+
+    <!-- Trigger the modal with a button -->
+
+
+    <!-- Modal -->
 </section>
-<section>
-    <div id="pages"></div>
-</section>
+
 
 <script src="../vendor/jquery/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
@@ -112,12 +148,15 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="../vendor/slick-1.8.0/slick/slick.min.js"></script>
+<script src="plugin/notify.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+<script src="../js/getalldistributors.js"></script>
 </body>
 
 <script>
-   
+
 </script>
 </html>
