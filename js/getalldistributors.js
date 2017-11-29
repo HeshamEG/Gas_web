@@ -64,7 +64,7 @@
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
                     '<td></td>' +
-                    '<td></td>' +
+                    '<td>'+distributor[t].credit+'</td>' +
                     '<td><button class="btn btn-primary" onclick="MangePackage('+t+')">إدارة الباقة</button></td>' +
                     '<td>' + '<button class="btn btn-warning" onclick="accceptordecliend(' + t + ',0)">' + 'تعطيل' + '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
@@ -74,7 +74,7 @@
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
                     '<td></td>' +
-                    '<td></td>' +
+                    '<td>'+distributor[t].credit+'</td>' +
                     '<td><button class="btn btn-primary" onclick="MangePackage('+t+')">إدارة الباقة</button></td>' +
                     '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">' + 'تفعيل' + '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
