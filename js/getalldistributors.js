@@ -93,6 +93,14 @@
                 $('#Package').modal('show');
 
             }
+            reCharge =function(distributorId,amount){
+                contactsRef.child(distributorId+'/credit').once('value').then(function (currentcredit){
+                    var newCredit=currentcredit+amount
+                contactsRef.child(distributorId+'/credit').set(newCredit)
+                contactsRef.child(distributorId+'/total').set(newCredit)
+                })
+
+             }
 
         }
 
