@@ -17,19 +17,32 @@
 
 
     var dbRef = firebase.database();
-    var ar_about = dbRef.ref('ar_about');
-    var en_about = dbRef.ref('en_about');
-  //get about from database
-    ar_about.once('value').then(function (arAbout) {
-        arAbout.val()
-    });
-    en_about.once('value').then(function (enAbout) {
-        enAbout.val()
-    })
+    var ar_about = dbRef.ref('ar_about/paragraph');
+    var en_about = dbRef.ref('en_about/paragraph');
+    var ar_terms = dbRef.ref('ar_terms/paragraph');
+    var en_terms = dbRef.ref('en_terms/paragraph');
+  // //get about from database
+  //   ar_about.once('value').then(function (arAbout) {
+  //       arAbout.val()
+  //   });
+  //   en_about.once('value').then(function (enAbout) {
+  //       enAbout.val()
+  //   })
+  //
+  //   en_about.once('value').then(function (enAbout) {
+  //       enAbout.val()
+  //   })
+  //   en_about.once('value').then(function (enAbout) {
+  //       enAbout.val()
+  //   })
     //texts to be set to db
   var aboutArText
   var aboutEnText
+  var termsArText
+  var termsEnText
     //set functions to db
 ar_about.set(aboutArText)
 en_about.set(aboutEnText)
+    ar_terms.set(termsArText)
+    en_terms.set(termsEnText)
 }());
