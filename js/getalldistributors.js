@@ -101,12 +101,13 @@
                     console.log(distributorId);
 
                         var creditRef=firebase.database().ref('distributors/' + distributorId + '/credit');
+                        var totalcreditRef=firebase.database().ref('distributors/' + distributorId + '/totalcredit');
                         console.log(creditRef);
                         creditRef.once('value').then(function (currentcredit) {
                             console.log('credit',currentcredit.val());
-                            var newCredit = currentcredit.val() + amount;
+                            var newCredit = parseInt(currentcredit.val()) + amount;
                             creditRef.set(newCredit);
-                            creditRef.set(newCredit)
+                            totalcreditRef.set(newCredit)
                         })
 
                 });
