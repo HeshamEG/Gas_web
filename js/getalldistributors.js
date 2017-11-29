@@ -63,8 +63,8 @@
                     '<td>' + distributor[t].name + '</td>' +
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
-                    '<td></td>' +
                     '<td>' + distributor[t].credit + '</td>' +
+                    '<td>'+distributor[t].totalcredit+'</td>' +
                     '<td><button class="btn btn-primary" onclick="MangePackage(' + t + ')">إدارة الباقة</button></td>' +
                     '<td>' + '<button class="btn btn-warning" onclick="accceptordecliend(' + t + ',0)">' + 'تعطيل' + '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
@@ -73,8 +73,8 @@
                     '<td>' + distributor[t].name + '</td>' +
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
-                    '<td></td>' +
                     '<td>' + distributor[t].credit + '</td>' +
+                    '<td>'+distributor[t].totalcredit+'</td>' +
                     '<td><button class="btn btn-primary" onclick="MangePackage(' + t + ')">إدارة الباقة</button></td>' +
                     '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">' + 'تفعيل' + '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
@@ -105,7 +105,7 @@
                         console.log(creditRef);
                         creditRef.once('value').then(function (currentcredit) {
                             console.log('credit',currentcredit.val());
-                            var newCredit = parseInt(currentcredit.val()) + amount;
+                            var newCredit = parseInt(currentcredit.val()) + parseInt(amount);
                             creditRef.set(newCredit);
                             totalcreditRef.set(newCredit)
                         })
