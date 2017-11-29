@@ -93,7 +93,6 @@
 
                 $('#Package').modal('show');
 
-
                 $('#addpackage').on('click', function () {
                     console.log('click');
                     var amount = document.getElementById('currentcridt').value;
@@ -101,14 +100,13 @@
                     distributorId = keys[params];
                     console.log(distributorId);
                     reCharge = function (distributorId, amount) {
-                        contactsRef.child(distributorId + '/credit').once('value').then(function (currentcredit) {
+                        var creditRef=dbRef.child('distributors')
+                        creditRef.child(distributorId + '/credit').once('value').then(function (currentcredit) {
                             console.log(currentcredit);
                             var newCredit = currentcredit + amount;
-                            contactsRef.child(distributorId + '/credit').set(newCredit);
-                            contactsRef.child(distributorId + '/totalcredit').set(newCredit)
-
+                            creditRef.child(distributorId + '/credit').set(newCredit);
+                            creditRef.child(distributorId + '/totalcredit').set(newCredit)
                         })
-
                     }
                 });
 
