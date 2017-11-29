@@ -12,7 +12,7 @@
 
     firebase.initializeApp(config);
     var ref = firebase.database().ref("history");
-    ref.orderByKey().startAt("date").on("child_added", function(snapshot) {
+    ref.orderByChild("date").startAt(1472167504389).on("child_added", function(snapshot) {
         console.log(snapshot.key);
     });
 }())
