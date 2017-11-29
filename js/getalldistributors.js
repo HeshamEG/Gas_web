@@ -64,8 +64,8 @@
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
                     '<td></td>' +
-                    '<td>'+distributor[t].credit+'</td>' +
-                    '<td><button class="btn btn-primary" onclick="MangePackage('+t+')">إدارة الباقة</button></td>' +
+                    '<td>' + distributor[t].credit + '</td>' +
+                    '<td><button class="btn btn-primary" onclick="MangePackage(' + t + ')">إدارة الباقة</button></td>' +
                     '<td>' + '<button class="btn btn-warning" onclick="accceptordecliend(' + t + ',0)">' + 'تعطيل' + '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
             } else {
@@ -74,8 +74,8 @@
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
                     '<td></td>' +
-                    '<td>'+distributor[t].credit+'</td>' +
-                    '<td><button class="btn btn-primary" onclick="MangePackage('+t+')">إدارة الباقة</button></td>' +
+                    '<td>' + distributor[t].credit + '</td>' +
+                    '<td><button class="btn btn-primary" onclick="MangePackage(' + t + ')">إدارة الباقة</button></td>' +
                     '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">' + 'تفعيل' + '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
             }
@@ -89,18 +89,32 @@
                 location.reload();
             };
 
-             MangePackage = function (params) {
+            MangePackage = function (params) {
+
                 $('#Package').modal('show');
 
-            }
-            reCharge =function(distributorId,amount){
-                contactsRef.child(distributorId+'/credit').once('value').then(function (currentcredit){
-                    var newCredit=currentcredit+amount
-                contactsRef.child(distributorId+'/credit').set(newCredit)
-                contactsRef.child(distributorId+'/total').set(newCredit)
-                })
 
-             }
+                $('#addpackage').on('click', function () {
+                    console.log('click');
+                    var amount = document.getElementById('currentcridt').value;
+                    console.log(amount);
+                    distributorId = keys[params];
+                    console.log(distributorId);
+                    reCharge = function (distributorId, amount) {
+                        contactsRef.child(distributorId + '/credit').once('value').then(function (currentcredit) {
+                            console.log(currentcredit);
+                            var newCredit = currentcredit + amount;
+                            contactsRef.child(distributorId + '/credit').set(newCredit);
+                            contactsRef.child(distributorId + '/totalcredit').set(newCredit)
+
+                        })
+
+                    }
+                });
+
+
+            };
+
 
         }
 
