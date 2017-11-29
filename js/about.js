@@ -19,15 +19,19 @@
     var ar_terms = dbRef.ref('ar_terms/paragraph');
     var en_terms = dbRef.ref('en_terms/paragraph');
 
-    $('#aboutGas').val(ar_about);
-    $('#aboutGasen').val(en_about);
+
     // //get about from database
-    //   ar_about.once('value').then(function (arAbout) {
-    //       arAbout.val()
-    //   });
-    //   en_about.once('value').then(function (enAbout) {
-    //       enAbout.val()
-    //   })
+    ar_about.once('value').then(function (arAbout) {
+
+        $('#aboutGas').val(arAbout.val());
+    });
+
+    en_about.once('value').then(function (enAbout) {
+
+        $('#aboutGasen').val(enAbout.val());
+    });
+
+
     //
     //   en_about.once('value').then(function (enAbout) {
     //       enAbout.val()
@@ -40,9 +44,9 @@
     var termsArText;
     var termsEnText;
     //set functions to db
-    $('#save').on('click',function () {
-        var aboutArText =$('#aboutGas').val();
-        var aboutEnText =$('#aboutGasen').val();
+    $('#save').on('click', function () {
+        var aboutArText = $('#aboutGas').val();
+        var aboutEnText = $('#aboutGasen').val();
         console.log(aboutArText);
         console.log(aboutEnText);
         ar_about.set(aboutArText);
