@@ -99,15 +99,16 @@
                     console.log(amount);
                     distributorId = keys[params];
                     console.log(distributorId);
-                    reCharge = function (distributorId, amount) {
-                        var creditRef=dbRef.child('distributors')
-                        creditRef.child(distributorId + '/credit').once('value').then(function (currentcredit) {
-                            console.log(currentcredit);
-                            var newCredit = currentcredit + amount;
-                            creditRef.child(distributorId + '/credit').set(newCredit);
-                            creditRef.child(distributorId + '/totalcredit').set(newCredit)
+
+                        var creditRef=firebase.database().ref('distributors/' + distributorId + '/credit');
+                        console.log(creditRef);
+                        creditRef.once('value').then(function (currentcredit) {
+                            console.log('credit',currentcredit.val());
+                            var newCredit = currentcredit.val() + amount;
+                            creditRef.set(newCredit);
+                            creditRef.set(newCredit)
                         })
-                    }
+
                 });
 
 
