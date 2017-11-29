@@ -10,9 +10,6 @@
     };
 
 
-
-
-
     firebase.initializeApp(config);
 
 
@@ -21,28 +18,38 @@
     var en_about = dbRef.ref('en_about/paragraph');
     var ar_terms = dbRef.ref('ar_terms/paragraph');
     var en_terms = dbRef.ref('en_terms/paragraph');
-  // //get about from database
-  //   ar_about.once('value').then(function (arAbout) {
-  //       arAbout.val()
-  //   });
-  //   en_about.once('value').then(function (enAbout) {
-  //       enAbout.val()
-  //   })
-  //
-  //   en_about.once('value').then(function (enAbout) {
-  //       enAbout.val()
-  //   })
-  //   en_about.once('value').then(function (enAbout) {
-  //       enAbout.val()
-  //   })
+
+    $('#aboutGas').val(ar_about);
+    $('#aboutGasen').val(en_about);
+    // //get about from database
+    //   ar_about.once('value').then(function (arAbout) {
+    //       arAbout.val()
+    //   });
+    //   en_about.once('value').then(function (enAbout) {
+    //       enAbout.val()
+    //   })
+    //
+    //   en_about.once('value').then(function (enAbout) {
+    //       enAbout.val()
+    //   })
+    //   en_about.once('value').then(function (enAbout) {
+    //       enAbout.val()
+    //   })
     //texts to be set to db
-  var aboutArText
-  var aboutEnText
-  var termsArText
-  var termsEnText
+
+    var termsArText;
+    var termsEnText;
     //set functions to db
-ar_about.set(aboutArText)
-en_about.set(aboutEnText)
-    ar_terms.set(termsArText)
-    en_terms.set(termsEnText)
+    $('#save').on('click',function () {
+        var aboutArText =$('#aboutGas').val();
+        var aboutEnText =$('#aboutGasen').val();
+        console.log(aboutArText);
+        console.log(aboutEnText);
+        ar_about.set(aboutArText);
+        en_about.set(aboutEnText);
+        window.location.reload()
+    });
+
+    // ar_terms.set(termsArText);
+    // en_terms.set(termsEnText);
 }());
