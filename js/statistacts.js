@@ -32,12 +32,12 @@
             // console.log(snapshot.val().status);
             if (snapshot.val().status === 'delivered') {
                 completed++
-                arrcomplated.push(completed);
+                // arrcomplated.push(completed);
 
             }
             if (snapshot.val().status === 'rejected') {
                 canceled++
-                arrcancled.push(canceled);
+                // arrcancled.push(canceled);
 
             }
 // resolve(completed)
@@ -48,7 +48,9 @@
 
         });
         setTimeout(function(){
-            console.log(canceled, completed)
+            console.log(canceled, completed);
+            $('#completed').append('<h4>' + completed + '</h4>');
+            $('#canceld').append('<h4>' + canceled + '</h4>');
         },3000)
         // console.log(arrcomplated.last() );
         // console.log(arrcomplated.lastElementChild );
