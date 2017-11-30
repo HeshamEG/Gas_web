@@ -15,14 +15,15 @@
         var price = document.getElementById('GasPrice').value;
 
         console.log(price);
-        // var ref = firebase.database().ref();
-        // ref.child('pipeprice').set(price)
+            var ref = firebase.database().ref();
+            ref.child('pipeprice').set(price)
     });
 
 
     $('#logout').click(function () {
         firebase.auth().signOut();
         console.log(firebase.auth().signOut())
+        window.location.href='../';
 
     });
 
