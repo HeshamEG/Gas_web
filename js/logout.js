@@ -1,5 +1,5 @@
 (function () {
-alert()
+    
     const config = {
         apiKey: "AIzaSyAzmtOBtWYDL4srdRqEfZFiwsq1rs2JHOA",
         authDomain: "gasksa-de4ab.firebaseapp.com",
@@ -9,6 +9,7 @@ alert()
         messagingSenderId: "193816669511"
     };
     firebase.initializeApp(config);
+
     var price = $('#GasPrice').val();
 
     $('#savepriceofgas').click(function () {
@@ -25,4 +26,4 @@ alert()
 
     });
 
-});
+}());

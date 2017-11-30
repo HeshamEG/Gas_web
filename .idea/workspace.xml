@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42055b5c-6a2f-4d81-9e73-4948d29dc85a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/about.html" afterPath="$PROJECT_DIR$/Admin/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/clintHistory.html" afterPath="$PROJECT_DIR$/Admin/clintHistory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/clints.html" afterPath="$PROJECT_DIR$/Admin/clints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/history.html" afterPath="$PROJECT_DIR$/Admin/history.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/index.html" afterPath="$PROJECT_DIR$/Admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/request.html" afterPath="$PROJECT_DIR$/Admin/request.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/statistacts.html" afterPath="$PROJECT_DIR$/Admin/statistacts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/users.html" afterPath="$PROJECT_DIR$/Admin/users.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logout.js" afterPath="$PROJECT_DIR$/js/logout.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,8 +19,8 @@
       <file leaf-file-name="request.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/request.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="98" column="39" lean-forward="false" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+            <state relative-caret-position="663">
+              <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -38,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1077">
+            <state relative-caret-position="2261">
               <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding />
             </state>
@@ -49,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/js/logout.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -224,7 +215,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106220000" />
+    <option name="totallyTimeSpent" value="106972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -632,15 +623,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin/request.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="98" column="39" lean-forward="false" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+        <state relative-caret-position="663">
+          <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1077">
+        <state relative-caret-position="2261">
           <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding />
         </state>
@@ -649,7 +640,7 @@
     <entry file="file://$PROJECT_DIR$/js/logout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
       </provider>
