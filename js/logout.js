@@ -9,7 +9,10 @@
         messagingSenderId: "193816669511"
     };
     firebase.initializeApp(config);
-
+    var refGetPrice = firebase.database().ref();
+refGetPrice.child('pipeprice').once('value').then(function (currentPrice) {
+    console.log(currentPrice.val())
+})
 
     $('#savepriceofgas').click(function () {
         var price = document.getElementById('GasPrice').value;
