@@ -1,5 +1,5 @@
 (function () {
-    
+
     const config = {
         apiKey: "AIzaSyAzmtOBtWYDL4srdRqEfZFiwsq1rs2JHOA",
         authDomain: "gasksa-de4ab.firebaseapp.com",
@@ -10,19 +10,19 @@
     };
     firebase.initializeApp(config);
 
-    var price = $('#GasPrice').val();
 
     $('#savepriceofgas').click(function () {
-        alert();
+        var price = document.getElementById('GasPrice').value;
+
         console.log(price);
-        var ref = firebase.database().ref();
-        ref.child('pipeprice').set(price)
+        // var ref = firebase.database().ref();
+        // ref.child('pipeprice').set(price)
     });
 
 
-    $('#logout').on('click',function () {
-            firebase.fireAuth.signOut();
-
+    $('#logout').click(function () {
+        firebase.auth().signOut();
+        console.log(firebase.auth().signOut())
 
     });
 
