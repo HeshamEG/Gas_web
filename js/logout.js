@@ -1,5 +1,5 @@
 (function () {
-
+alert()
     const config = {
         apiKey: "AIzaSyAzmtOBtWYDL4srdRqEfZFiwsq1rs2JHOA",
         authDomain: "gasksa-de4ab.firebaseapp.com",
@@ -9,12 +9,20 @@
         messagingSenderId: "193816669511"
     };
     firebase.initializeApp(config);
-    var price
+    var price = $('#GasPrice').val();
 
-    var ref=firebase.database().ref();
-    ref.child('pipeprice').set(price)
-logout=function () {
-    firebase.fireAuth.signOut();
+    $('#savepriceofgas').click(function () {
+        alert();
+        console.log(price);
+        var ref = firebase.database().ref();
+        ref.child('pipeprice').set(price)
+    });
 
-}
-})
+
+    $('#logout').on('click',function () {
+            firebase.fireAuth.signOut();
+
+
+    });
+
+});
