@@ -21,7 +21,7 @@
         var date  =Date.parse(newDate);
         console.log(date);
         var ref = firebase.database().ref("history");
-        ref.orderByChild("date").startAt(date).on("child_added", function (snapshot) {
+        ref.orderByChild("date").startAt(date).endAt().on("child_added", function (snapshot) {
             console.log(snapshot.key);
         });
     });
