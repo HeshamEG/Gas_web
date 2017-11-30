@@ -11,7 +11,8 @@
 
     firebase.initializeApp(config);
     $('#serach').on('click', function () {
-
+        var arrcomplated = [];
+        var arrcancled = [];
         console.log('here');
         var from = $('#fromDate').val();
         var to = $('#toDate').val();
@@ -19,30 +20,35 @@
         var dates1 = from.split("-");
         var newDate = dates1[1] + "/" + dates1[0] + "/" + dates1[2];
         var date = Date.parse(newDate);
-        var dates2  = to.split("-");
+        var dates2 = to.split("-");
         var newDate2 = dates2[1] + "/" + dates2[0] + "/" + dates2[2];
         var date2 = Date.parse(newDate2);
-var completed=0
-var canceled=0
+        var completed = 0
+        var canceled = 0
         // var promise=new Promise((resolve,reject),function () {
 
-            var ref = firebase.database().ref("history");
-            ref.orderByChild("date").startAt(date).endAt(date2).on("child_added", function (snapshot) {
-                console.log(snapshot.val().status);
-                if(snapshot.val().status==='delivered'){
-                    completed++
-                }
-                if(snapshot.val().status==='rejected'){
-                    canceled++
-                }
+        var ref = firebase.database().ref("history");
+        ref.orderByChild("date").startAt(date).endAt(date2).on("child_added", function (snapshot) {
+            console.log(snapshot.val().status);
+            if (snapshot.val().status === 'delivered') {
+                completed++
+            }
+            if (snapshot.val().status === 'rejected') {
+                canceled++
+            }
+            arrcomplated.push(completed);
+            arrcancled.push(canceled);
 // resolve(completed)
             // });
-        // }).then(function () {
-            console.log(completed,canceled);
+            // }).then(function () {
+            // console.log(arrcomplated, arrcancled);
+
 
         });
 
-        console.log(completed,canceled);
+        // $('#complete').append('<h4>' + completed + '</h4>');
+        // $('#canceld').append('<h4>' + canceled + '</h4>');
+        console.log(arrcomplated, arrcancled);
 
     });
 
