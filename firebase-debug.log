@@ -34,3 +34,39 @@
 [info] i  hosting: Serving hosting files from: /
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2017-11-30T06:29:26.123Z] ----------------------------------------------------------------------
+[debug] [2017-11-30T06:29:26.136Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mahmoud\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-11-30T06:29:26.137Z] CLI Version:   3.15.2
+[debug] [2017-11-30T06:29:26.137Z] Platform:      win32
+[debug] [2017-11-30T06:29:26.137Z] Node Version:  v8.4.0
+[debug] [2017-11-30T06:29:26.139Z] Time:          Thu Nov 30 2017 08:29:26 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-30T06:29:26.139Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-30T06:29:26.277Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-30T06:29:26.278Z] > authorizing via signed-in user
+[debug] [2017-11-30T06:29:26.282Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-30T06:29:26.284Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/tjOgPMZrQLldNKUMvLg4T353bylA2cDbm1YZ6_Xb2OY',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Nov 30 2017 08:29:26 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-30T06:29:27.952Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-30T06:29:28.100Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gasksa-de4ab  
+ Thu Nov 30 2017 08:29:28 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-30T06:29:33.062Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-30T06:29:33.062Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gasksa-de4ab/tokens  
+ Thu Nov 30 2017 08:29:33 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-30T06:29:33.943Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\mahmoud\Desktop\Gas_web'...
+[info] 
+[debug] [2017-11-30T06:29:33.946Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gasksa-de4ab  
+ Thu Nov 30 2017 08:29:33 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-30T06:29:35.135Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-30T06:29:35.135Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/193816669511/clients/_:getWebAppConfig  
+ Thu Nov 30 2017 08:29:35 GMT+0200 (Egypt Standard Time)
+[debug] [2017-11-30T06:29:36.538Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: /
+[info] +  hosting: Local server: http://localhost:5000
+

@@ -18,10 +18,13 @@
 
         var dates1 = from.split("-");
         var newDate = dates1[1] + "/" + dates1[0] + "/" + dates1[2];
-        var date  =Date.parse(newDate);
-        console.log(date);
+        var date = Date.parse(newDate);
+        var dates2  = to.split("-");
+        var newDate2 = dates2[1] + "/" + dates2[0] + "/" + dates2[2];
+        var date2 = Date.parse(newDate2);
+
         var ref = firebase.database().ref("history");
-        ref.orderByChild("date").startAt(date).endAt().on("child_added", function (snapshot) {
+        ref.orderByValue().startAt(date).endAt(date2).on("value", function (snapshot) {
             console.log(snapshot.key);
         });
     });
