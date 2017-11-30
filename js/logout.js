@@ -10,23 +10,24 @@
     };
     firebase.initializeApp(config);
     var refGetPrice = firebase.database().ref();
-refGetPrice.child('pipeprice').once('value').then(function (currentPrice) {
-    console.log(currentPrice.val())
-})
+    refGetPrice.child('pipeprice').once('value').then(function (currentPrice) {
+        console.log(currentPrice.val())
+        document.getElementById('GasPrice').value = currentPrice.val();
+    })
 
     $('#savepriceofgas').click(function () {
         var price = document.getElementById('GasPrice').value;
 
         console.log(price);
-            var ref = firebase.database().ref();
-            ref.child('pipeprice').set(price)
+        var ref = firebase.database().ref();
+        ref.child('pipeprice').set(price)
     });
 
 
     $('#logout').click(function () {
         firebase.auth().signOut();
         console.log(firebase.auth().signOut())
-        window.location.href='../';
+        window.location.href = '../';
 
     });
 
