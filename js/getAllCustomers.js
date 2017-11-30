@@ -34,14 +34,14 @@
                     '<td>' + distributor[t].name + '</td>' +
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
-                    '<td>' + '<button class="btn btn-warning" onclick="accceptordecliend(' + t + ',0)">' +'تعطيل'+ '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
+                    '<td>'  + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
             }else{
                 tbody = '<tr>' +
                     '<td>' + distributor[t].name + '</td>' +
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
-                    '<td>' + '<button class="btn btn-success" onclick="accceptordecliend(' + t + ',1)">' +'تفعيل'+ '</button>' + '&nbsp;&nbsp;&nbsp;' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
+                    '<td>' +  '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
             }
             request.row.add($(tbody)).draw();
