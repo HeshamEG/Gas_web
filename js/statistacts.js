@@ -29,15 +29,17 @@
 
         var ref = firebase.database().ref("history");
         ref.orderByChild("date").startAt(date).endAt(date2).on("child_added", function (snapshot) {
-            console.log(snapshot.val().status);
+            // console.log(snapshot.val().status);
             if (snapshot.val().status === 'delivered') {
                 completed++
+                arrcomplated.push(completed);
+
             }
             if (snapshot.val().status === 'rejected') {
                 canceled++
+                arrcancled.push(canceled);
+
             }
-            arrcomplated.push(completed);
-            arrcancled.push(canceled);
 // resolve(completed)
             // });
             // }).then(function () {
@@ -45,10 +47,16 @@
 
 
         });
+        setTimeout(function(){
+            console.log(canceled, completed)
+        },1000)
+        // console.log(arrcomplated.last() );
+        // console.log(arrcomplated.lastElementChild );
+        // console.log(arrcomplated.lastIndex );
 
         // $('#complete').append('<h4>' + completed + '</h4>');
         // $('#canceld').append('<h4>' + canceled + '</h4>');
-        console.log(arrcomplated, arrcancled);
+        // console.log(arrcomplated[0].length, arrcancled);
 
     });
 
