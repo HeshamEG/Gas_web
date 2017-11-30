@@ -49,7 +49,7 @@
         });
         setTimeout(function(){
             console.log(canceled, completed)
-        },1000)
+        },3000)
         // console.log(arrcomplated.last() );
         // console.log(arrcomplated.lastElementChild );
         // console.log(arrcomplated.lastIndex );
