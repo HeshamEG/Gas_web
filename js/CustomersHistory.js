@@ -35,7 +35,17 @@
     var contactsRef = dbRef.ref('customers/' + disid + '/history');
     contactsRef.once('value').then(function (snapshot) {
         var history = [];
-        var data = []  ;
+        var data = [];
+
+        try {
+            historyTable
+                .clear()
+                .draw();
+        }
+        catch (ex) {
+            // alert("error");
+            console.log(ex);
+        }
         // var names = [];
         for (var i  in snapshot.val()) {
             dbRef.ref('history/' + i);
@@ -47,7 +57,7 @@
             var details = dbRef.ref('history/' + history[t]);
             details.once('value').then(function (res) {
                 data.push(res.val());
-                var refCustomerName = dbRef.ref('distributors/'+res.val().assignDistID+'/name');
+                var refCustomerName = dbRef.ref('distributors/' + res.val().assignDistID + '/name');
 
                 // console.log(data);
                 refCustomerName.once('value').then(function (name) {
@@ -56,16 +66,15 @@
                     console.log(t)
 
                     dh = '<tr>'
-                        +'<td>'+res.val().date+'</td>'
-                        +'<td>'+res.val().pipesNo+'</td>'
-                        +'<td>'+res.val().location.label+'</td>'
-                        +'<td>'+res.val().status+'</td>'
-                        +'<td>'+name.val()+'</td>'
-                        +'</tr>';
+                        + '<td>' + res.val().date + '</td>'
+                        + '<td>' + res.val().pipesNo + '</td>'
+                        + '<td>' + res.val().location.label + '</td>'
+                        + '<td>' + res.val().status + '</td>'
+                        + '<td>' + name.val() + '</td>'
+                        + '</tr>';
                     historyTable.row.add($(dh)).draw();
 
                 });
-
 
 
             })

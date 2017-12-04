@@ -19,7 +19,17 @@
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
         var keys = [];
-        var imgs = []
+
+        var imgs = [];
+        try {
+            request
+                .clear()
+                .draw();
+        }
+        catch (ex) {
+            // alert("error");
+            console.log(ex);
+        }
         for (var i  in snapshot.val()) {
 
             if (snapshot.val()[i].state == 0) {

@@ -36,6 +36,15 @@
     contactsRef.once('value').then(function (snapshot) {
         var history = [];
         var data = []  ;
+        try {
+            historyTable
+                .clear()
+                .draw();
+        }
+        catch (ex) {
+            // alert("error");
+            console.log(ex);
+        }
         // var names = [];
         for (var i  in snapshot.val()) {
             dbRef.ref('history/' + i);

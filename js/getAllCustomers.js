@@ -19,6 +19,16 @@
     contactsRef.on('value', function (snapshot) {
         var distributor = [];
         var keys = [];
+
+        try {
+            request
+                .clear()
+                .draw();
+        }
+        catch (ex) {
+            // alert("error");
+            console.log(ex);
+        }
         for (var i  in snapshot.val()) {
 
             distributor.push(snapshot.val()[i]);
@@ -34,14 +44,14 @@
                     '<td>' + distributor[t].name + '</td>' +
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
-                    '<td>'  + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
+                    '<td>' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
-            }else{
+            } else {
                 tbody = '<tr>' +
                     '<td>' + distributor[t].name + '</td>' +
                     '<td>' + distributor[t].email + '</td>' +
                     '<td>' + distributor[t].phoneNo + '</td>' +
-                    '<td>' +  '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
+                    '<td>' + '<button class="btn btn-danger" onclick="hestory(' + t + ')">سجل العمليات</button>' + '</td>' +
                     '</tr>';
             }
             request.row.add($(tbody)).draw();
@@ -58,17 +68,12 @@
 
         hestory = function (params) {
             console.log(keys[params]);
-            window.location.href = 'clintHistory.html?distributorsid='+keys[params]
+            window.location.href = 'clintHistory.html?distributorsid=' + keys[params]
 
         }
 
 
-
-
-
-
     });
-
 
 
 }());
